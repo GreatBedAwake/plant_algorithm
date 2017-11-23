@@ -9,7 +9,7 @@ def count_fibonacci(n):
     else:
         fn = 0
         fn_1 = 1
-        for i in xrange(n-1):
+        for i in range(n-1):
             tmp = fn_1
             fn_1 += fn
             fn = tmp
@@ -22,4 +22,4 @@ start = time()
 count_fibonacci(count_n)
 end = time()
 count_time = end - start
-print count_time
+print(count_time)

@@ -13,7 +13,7 @@ def count_fibonacci(n):
                 count_list.append(1)
             else:
                 count_list.append(0)
-            n = n / 2
+            n = int(n / 2)
         count_list.reverse()
         fn_1 = 1
         fn = 0
@@ -30,9 +30,9 @@ def count_fibonacci(n):
         return fn
 
 
-count_n = 100000000
+count_n = 10000
 start = time()
-count_fibonacci(count_n)
+print(count_fibonacci(count_n))
 end = time()
 count_time = end - start
-print count_time
+print(count_time)
