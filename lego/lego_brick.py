@@ -56,6 +56,7 @@ def brick_paving(floor, start_spot, spot, length, brick_sign):
         spot_brick_sign = floor.get_brick_sign(spot)
         floor.set_4_brick_sign(start_spot, brick_sign())
         floor.set_brick_sign(spot, spot_brick_sign)
+        floor.show_floor()
     else:
         length_2 = int(length/2)
         middle_x = start_spot.x + length_2
@@ -102,6 +103,7 @@ def brick_paving(floor, start_spot, spot, length, brick_sign):
             floor.set_brick_sign(spot_22, sign)
         else:
             spot_22 = spot
+        floor.show_floor()
         brick_paving(floor, start_spot_11, spot_11, length_2, brick_sign)
         brick_paving(floor, start_spot_12, spot_12, length_2, brick_sign)
         brick_paving(floor, start_spot_21, spot_21, length_2, brick_sign)
@@ -110,7 +112,7 @@ def brick_paving(floor, start_spot, spot, length, brick_sign):
 
 if __name__ == '__main__':
     # 地面生成
-    floor = Floor(4)
+    floor = Floor(3)
     floor.show_floor()
 
     # 自动砖的样式生成
